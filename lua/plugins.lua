@@ -4,7 +4,7 @@
 
 return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
-    
+
     -- File explorer
     use {
         'nvim-tree/nvim-tree.lua',
@@ -29,10 +29,17 @@ return require('packer').startup(function(use)
 
     -- Comment toggler
     use 'tpope/vim-commentary'
-    
+
     -- Git integration
     use 'tpope/vim-fugitive'
-    
+
+    -- GitSigns
+    use {
+        'lewis6991/gitsigns.nvim',
+        requires = {'nvim-lua/plenary.nvim'},
+        config = function() require('gitsigns').setup() end
+    }
+
     -- Statusline
     use {
         'nvim-lualine/lualine.nvim',
@@ -50,9 +57,19 @@ return require('packer').startup(function(use)
     }
 
     -- LSP
+    use {
+        "williamboman/mason.nvim",
+        "williamboman/mason-lspconfig.nvim",
+        "neovim/nvim-lspconfig",
+        config = function() require('config/lsp-config') end
+    }
 
+    -- Autocomplete
+    use 'hrsh7th/nvim-cmp' -- Autocompletion plugin
+    use 'hrsh7th/cmp-nvim-lsp' -- LSP source for nvim-cmp
+    use 'L3MON4D3/LuaSnip' -- Snippets plugin
+    use 'saadparwaiz1/cmp_luasnip' -- Snippets source for nvim-cmp
+    use 'rafamadriz/friendly-snippets' -- Set of preconfigured snippets
 
 end)
-
-
 

@@ -1,0 +1,29 @@
+# Temporary files created by vim/nvim
+*.swp
+*.swo
+*.swap
+
+# Backup files created by vim/nvim
+*.bak
+*.bkp
+*.bck
+*.orig
+
+# Undo files created by vim/nvim
+*.undo
+*.un~
+
+# Vim session files
+Session.vim
+
+# Netrw directory history
+.netrwhist
+
+# Auto-generated documentation
+doc/tags
+
+# OS generated files
+.DS_Store
+
+# Plugin dir created by packer.nvim
+plugin/

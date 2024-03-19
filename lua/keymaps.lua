@@ -2,7 +2,6 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
-local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
 
 -- Copy and yank enhancements

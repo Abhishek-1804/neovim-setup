@@ -5,7 +5,16 @@
 return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
 
+    -- Startup page layout
+    use {
+        'goolord/alpha-nvim',
+        config = function ()
+            require'alpha'.setup(require'alpha.themes.dashboard'.config)
+        end
+    }
+
     -- File explorer
+    -- To view file icons, download a nerd font from nerdfonts.com and move the folder to ~/Library/Fonts
     use {
         'nvim-tree/nvim-tree.lua',
         requires = {'nvim-tree/nvim-web-devicons'},

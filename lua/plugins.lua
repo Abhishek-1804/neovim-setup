@@ -80,5 +80,12 @@ return require('packer').startup(function(use)
     use 'saadparwaiz1/cmp_luasnip' -- Snippets source for nvim-cmp
     use 'rafamadriz/friendly-snippets' -- Set of preconfigured snippets
 
+    -- Terminal
+    use {
+        "akinsho/nvim-toggleterm.lua",
+        tag = 'v2.*',
+        config = function() require("config/toggleterm") end
+    }
+
 end)
 

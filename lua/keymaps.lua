@@ -27,3 +27,12 @@ vim.keymap.set("n", "<leader><CR>", ":noh<CR>", opts)             -- Clear searc
 
 -- Editing enhancements
 vim.keymap.set("n", "0", "^", opts)                               -- Move cursor to the first non-blank character of the line
+
+-- Automatically close parentheses and add cursor inside
+vim.api.nvim_set_keymap('i', '(', '()<Esc>i', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('i', '{', '{}<Esc>i', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('i', '{<CR>', '{<CR>}<Esc>O', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('i', '[', '[]<Esc>i', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('i', '<', '<><Esc>i', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('i', "'", "''<Esc>i", {noremap = true, silent = true})
+vim.api.nvim_set_keymap('i', '"', '""<Esc>i', {noremap = true, silent = true})

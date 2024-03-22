@@ -1,6 +1,6 @@
 require("toggleterm").setup({
   -- General setup
-  size = 15, -- Set the terminal to open with a height of 15 lines
+  size = 20, -- Set the terminal to open with a height of 15 lines
   open_mapping = [[<leader>tt]],
   hide_numbers = true,
   shade_filetypes = {},

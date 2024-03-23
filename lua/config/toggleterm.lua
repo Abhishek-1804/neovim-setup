@@ -1,6 +1,6 @@
 require("toggleterm").setup({
   -- General setup
-  size = 20, -- Set the terminal to open with a height of 20 lines
+  size = 15, -- Set the terminal to open with a height of 15 lines
   open_mapping = [[<c-t>]],
   hide_numbers = true,
   shade_filetypes = {},
@@ -26,4 +26,3 @@ function _G.set_terminal_keymaps()
 end
 
 vim.cmd('autocmd! TermOpen term://* lua set_terminal_keymaps()')
-

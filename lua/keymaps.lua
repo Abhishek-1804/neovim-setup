@@ -37,5 +37,5 @@ vim.api.nvim_set_keymap('i', '<', '<><Esc>i', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('i', "'", "''<Esc>i", {noremap = true, silent = true})
 vim.api.nvim_set_keymap('i', '"', '""<Esc>i', {noremap = true, silent = true})
 
--- cd into current directory
-vim.api.nvim_set_keymap("n", "<leader>cd", ":cd %:p:h<CR>", {noremap = true, silent = true})
+-- Copies current path to clipboard
+vim.api.nvim_set_keymap("n", "<leader>cd", ":cd %:p:h<CR>:let @+=shellescape(expand('%:p:h'), 1)<CR>", {noremap = true, silent = true})

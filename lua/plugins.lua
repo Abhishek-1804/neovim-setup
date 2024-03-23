@@ -86,6 +86,4 @@ return require('packer').startup(function(use)
         tag = 'v2.*',
         config = function() require("config/toggleterm") end
     }
-
 end)
-

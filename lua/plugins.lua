@@ -70,7 +70,7 @@ return require('packer').startup(function(use)
         "williamboman/mason.nvim",
         "williamboman/mason-lspconfig.nvim",
         "neovim/nvim-lspconfig",
-        config = function() require('config/lsp-config') end
+        config = function() require('config.lsp-config') end
     }
 
     -- Autocomplete
@@ -84,6 +84,7 @@ return require('packer').startup(function(use)
     use {
         "akinsho/nvim-toggleterm.lua",
         tag = 'v2.*',
-        config = function() require("config/toggleterm") end
+        config = function() require("config.toggleterm") end
     }
+
 end)
